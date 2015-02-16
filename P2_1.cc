@@ -40,6 +40,13 @@ int main(int argc, char *argv[])
 	uint32_t queueSize = 2000;
 	uint32_t segSize = 512;
 	uint32_t windowSize = 1000;
+
+	//RedQueue
+	uint32_t meanPacketSize = 500;
+	uint32_t minTh = 5;
+	uint32_t maxTh = 15;
+	uint32_t queueLimit = 25;
+
 	std::string dataRate = "5Mbps";
 	std::string RdataRate = "5Mbps";
 	std::string delay = "10ms";
@@ -104,12 +111,16 @@ int main(int argc, char *argv[])
 	HostToRouter.SetChannelAttribute ("Delay", StringValue (delay));
 	if (queueType == "droptail")
 	{
-		HostToRouter.SetQueue ("ns3::DropTailQueue", "Mode", StringValue("QUEUE_MODE_BYTES"));
-		HostToRouter.SetQueue ("ns3::DropTailQueue", "MaxBytes", UintegerValue(queueSize));
+		HostToRouter.SetQueue ("ns3::DropTailQueue", "Mode", StringValue("QUEUE_MODE_BYTES"),
+										"MaxBytes", UintegerValue(queueSize));
 	}
 	else
 	{
-
+		HostToRouter.SetQueue ("ns3::RedQueue", "Mode", StringValue ("QUEUE_MODE_BYTES"),
+												"MinTh", UintegerValue (minTh),
+												"MaxTh", UintegerValue (maxTh),
+												"LinkBandwidth", StringValue (dataRate),
+												"LinkDelay", StringValue (delay));		
 	}	
 
 //Build link between router to router
@@ -118,12 +129,16 @@ int main(int argc, char *argv[])
 	RouterToRouter.SetChannelAttribute ("Delay", StringValue (Rdelay));
 	if (queueType == "droptail")
 	{
-		RouterToRouter.SetQueue ("ns3::DropTailQueue", "Mode", StringValue("QUEUE_MODE_BYTES"));
-		RouterToRouter.SetQueue ("ns3::DropTailQueue", "MaxBytes", UintegerValue(queueSize));
+		RouterToRouter.SetQueue ("ns3::DropTailQueue", "Mode", StringValue("QUEUE_MODE_BYTES"),
+									 "MaxBytes", UintegerValue(queueSize));
 	}
 	else
 	{
-
+		HostToRouter.SetQueue ("ns3::RedQueue", "Mode", StringValue ("QUEUE_MODE_BYTES"),
+											"MinTh", UintegerValue (minTh),
+											"MaxTh", UintegerValue (maxTh),
+											"LinkBandwidth", StringValue (RdataRate),
+											"LinkDelay", StringValue (Rdelay));	
 	}	
 
 
