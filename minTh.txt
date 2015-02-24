@@ -1,0 +1,117 @@
+RED Queue ===================================
+
+host to router link:  DataRate: 5Mbps Delay: 5ms
+bottleneck link:  DataRate: 2Mbps Delay: 10ms
+queueType: RED queueLimit: 4000 MaxTh: 3000 MinTh: 10 DropRate: 50
+TCP flows:  windowSize: 10000 SegmentSize: 512
+UDP flows:  maxPacketSize: 512
+TCP goodput: 14174.3
+TCP goodput: 13467
+TCP goodput: 14841.1
+TCP goodput: 4461.53
+TCP goodput: 15186.7
+			Left_nodes_TCP_flows_average_goodput: 12426.1
+
+UDP goodput: 12565.2
+UDP goodput: 16684.2
+UDP goodput: 17659
+UDP goodput: 15812.8
+UDP goodput: 16684.3
+			Middle_nodes_UDP_flows-average_goodput: 15881.1
+
+UDP goodput: 18474.7
+UDP goodput: 16454.2
+UDP goodput: 18431.8
+UDP goodput: 18284.9
+UDP goodput: 17783
+			Left_nodes_UDP_flows_average_goodput: 17885.7
+
+						total_average_goodput: 15397.6
+
+
+host to router link:  DataRate: 5Mbps Delay: 5ms
+bottleneck link:  DataRate: 2Mbps Delay: 10ms
+queueType: RED queueLimit: 4000 MaxTh: 3000 MinTh: 100 DropRate: 50
+TCP flows:  windowSize: 10000 SegmentSize: 512
+UDP flows:  maxPacketSize: 512
+TCP goodput: 14483.6
+TCP goodput: 5325.36
+TCP goodput: 4136.89
+TCP goodput: 11948.7
+TCP goodput: 24041.3
+			Left_nodes_TCP_flows_average_goodput: 11987.2
+
+UDP goodput: 13801.1
+UDP goodput: 16941.7
+UDP goodput: 17813
+UDP goodput: 15864.3
+UDP goodput: 16941
+			Middle_nodes_UDP_flows-average_goodput: 16272.2
+
+UDP goodput: 18423.2
+UDP goodput: 16505.6
+UDP goodput: 18380.4
+UDP goodput: 18233.7
+UDP goodput: 17937.1
+			Left_nodes_UDP_flows_average_goodput: 17896
+
+						total_average_goodput: 15385.1
+
+
+host to router link:  DataRate: 5Mbps Delay: 5ms
+bottleneck link:  DataRate: 2Mbps Delay: 10ms
+queueType: RED queueLimit: 4000 MaxTh: 3000 MinTh: 1000 DropRate: 50
+TCP flows:  windowSize: 10000 SegmentSize: 512
+UDP flows:  maxPacketSize: 512
+TCP goodput: 2164.81
+TCP goodput: 5530.18
+TCP goodput: 24355.9
+TCP goodput: 13692.3
+TCP goodput: 17451.8
+			Left_nodes_TCP_flows_average_goodput: 12639
+
+UDP goodput: 12410.7
+UDP goodput: 16117.8
+UDP goodput: 17505
+UDP goodput: 16327.9
+UDP goodput: 16376.3
+			Middle_nodes_UDP_flows-average_goodput: 15747.5
+
+UDP goodput: 18320.3
+UDP goodput: 16454.2
+UDP goodput: 18483.1
+UDP goodput: 18336.2
+UDP goodput: 17269
+			Left_nodes_UDP_flows_average_goodput: 17772.6
+
+						total_average_goodput: 15386.4
+
+
+host to router link:  DataRate: 5Mbps Delay: 5ms
+bottleneck link:  DataRate: 2Mbps Delay: 10ms
+queueType: RED queueLimit: 4000 MaxTh: 3000 MinTh: 2500 DropRate: 50
+TCP flows:  windowSize: 10000 SegmentSize: 512
+UDP flows:  maxPacketSize: 512
+TCP goodput: 12988.8
+TCP goodput: 9626.62
+TCP goodput: 13341.5
+TCP goodput: 9282.02
+TCP goodput: 17245.9
+			Left_nodes_TCP_flows_average_goodput: 12497
+
+UDP goodput: 12719.7
+UDP goodput: 16632.7
+UDP goodput: 18018.3
+UDP goodput: 16276.4
+UDP goodput: 16170.9
+			Middle_nodes_UDP_flows-average_goodput: 15963.6
+
+UDP goodput: 18577.6
+UDP goodput: 15528.6
+UDP goodput: 18431.8
+UDP goodput: 18284.9
+UDP goodput: 17783
+			Left_nodes_UDP_flows_average_goodput: 17721.2
+
+						total_average_goodput: 15393.9
+
